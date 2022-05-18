@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.center {
+    text-align: center;
+}
+
+html,
+body {
+    height: 100%;
+    margin-left: 0px;
+    display: block;
+}
+
+$landing-background: #17666b;
+$auth-info-background-color: #5093a3;
+$auth-form-background-color: #156b51;
+//-------------------- Variables ------- -------------------------
+//-------------------- ----------------- -------------------------
+$nav-text-padding: 0px 10px 0px 0px;
+$side-navigation-width: 180px;
+$side-navigation-height: 100%;
+$toolbar-spacer: 1 1 auto;
+$toolbar-z-index: 3;
+$text-icon-color: white;
+$side-nav-background-color: #3f51b5;
+$side-nav-font-color: white;
+$toolbar-background: #3f51b5;
+$toolbar-font-color: white;
+$hover-background-color: #484d53;
+$notification-width: 30%;
+$sideNavigation-shadow: 0px 0px 1px black;
+$toolbar-shadow: 0px 0px 0px black;
+$toolbar-height: 60px;
+$global-card-gutter: 10px;
+$global-card-padding: 10px;
+$full-width: 100%;
+$btn-focus-none: 0px none;
+//-------------------- Extending Classed -------------------------
+//-------------------- ----------------- -------------------------
+%card-padding {
+    position: absolute;
+    top: $global-card-padding;
+    left: $global-card-padding;
+    right: $global-card-padding;
+    bottom: $global-card-padding;
+}
+
+%card-more-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+%card-content {
+    text-align: center;
+}
+
+%table-wrapper {
+    overflow: auto;
+    width: $full-width;
+    %table {
+        width: $full-width;
+    }
+}
+
+%custom-btn {
+    outline: $btn-focus-none;
+}

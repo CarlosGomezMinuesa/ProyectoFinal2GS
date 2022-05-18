@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+
+<div class="my-form">
+    <form class="signup-form" [formGroup]="loginUserFormGroup" novalidate action="" (ngSubmit)="loginUserFormGroup.valid && loginUser()">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title> INICIO DE SESION </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+
+
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <input matInput placeholder="Email" formControlName="email">
+                            <mat-error *ngIf="loginUserFormGroup.controls['email'].hasError('required')">
+                                Email <strong>requerido</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <input type="password" matInput placeholder="Contraseña" formControlName="password">
+                            <mat-error *ngIf="loginUserFormGroup.controls['password'].hasError('required')">
+                                Contraseña <strong>requerida</strong>
+                            </mat-error>
+                            <mat-error *ngIf="loginUserFormGroup.controls['password'].errors?.['minlength']">
+                                Longitud mínima de 8 caracteres
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" type="submit">Iniciar Sesión</button>
+            </mat-card-actions>
+            <p>
+                <a [routerLink]="['/forgotPass']" routerLinkActive="router-link-active">¿Has olvidado la contraseña?</a>
+            </p>
+            <p>
+                ¿No tienes cuenta? <a [routerLink]="['/register']" routerLinkActive="router-link-active">Registrarse</a>
+            </p>
+        </mat-card>
+    </form>
+</div>

@@ -1,0 +1,129 @@
+@import "~src/styles";
+%nav-colors {
+    background-color: $side-nav-background-color;
+    color: $side-nav-font-color;
+}
+
+%toolbar {
+    background-color: $toolbar-background;
+    color: $toolbar-font-color;
+    position: fixed;
+    top: 0;
+    width: calc(100% - #{$side-navigation-width});
+    z-index: $toolbar-z-index;
+    height: $toolbar-height;
+}
+
+.content-area {
+    margin-top: $toolbar-height;
+}
+
+//----------------------------------------------------------
+//---------------- Sidebar ----
+.sidenav-container {
+    height: $side-navigation-height;
+}
+
+.sideNavigation {
+    box-shadow: $sideNavigation-shadow;
+    width: $side-navigation-width;
+    @extend %nav-colors;
+}
+
+// .sidenav .mat-toolbar {
+//   background: inherit;
+// }
+.mat-raised-button.mat-primary[_ngcontent-c1] {
+    background-color: #ffffff;
+    color: #3f51b5
+}
+
+.navigation-list {
+    padding-top: 0;
+    .mat-list-item {
+        color: #fff;
+        font-size: 14px;
+    }
+    .submenu {
+        position: absolute;
+        right: 3px;
+        min-width: 0;
+        padding: 0;
+    }
+    .menu-text {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        .nav-label {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 100px;
+            padding-left: 5px;
+        }
+    }
+    // :hover {
+    //   background-color: $hover-background-color;
+    // }
+}
+
+.nav-list-item {
+    color: $text-icon-color
+}
+
+.nav-label {
+    padding: $nav-text-padding;
+    color: white;
+}
+
+//----------------------------------------------------------
+//---------------- Toolbar ----
+.toolbar-spacer {
+    flex: $toolbar-spacer;
+}
+
+.toolbar {
+    box-shadow: $toolbar-shadow;
+    @extend %toolbar;
+}
+
+.mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+//----------------------------------------------------------
+//---------------- Notification  ----
+.notification {
+    width: $notification-width;
+    .notification-toolbar {
+        height: $toolbar-height;
+        @extend %nav-colors
+    }
+}
+
+//----------------------------------------------------------
+//---------------- Logo  ----
+.logo {
+    border: 0px;
+    height: $toolbar-height;
+    @extend %nav-colors
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.custom-btn:focus {
+    @extend %custom-btn;
+}
+
+.mat-raised-button.mat-primary[_ngcontent-c7] {
+    background-color: #ffffff;
+    color: #3f51b5;
+}

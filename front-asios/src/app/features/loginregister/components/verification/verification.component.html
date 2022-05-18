@@ -1,0 +1,15 @@
+<div style="align-items: center; text-align: center; font-weight: 500px; font-size: 26px; width: 500px; padding-top: 100px; margin: auto;">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>VERIFICA CUENTA</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>Te has registrado correctamente, revisa el correo para verificar tu cuenta.</p>
+            <button color="primary" mat-raised-button custom-btn btn-primary (click)="resendVerifyEmail()">Reenviar correo de verificación</button>
+            <!-- <p style="margin-top: 15px ;">
+                ¿Ya estás verificado? <a [routerLink]="['/login']" routerLinkActive="router-link-active">Ir a Inicio de Sesión</a>
+            </p> -->
+        </mat-card-content>
+    </mat-card>
+
+</div>

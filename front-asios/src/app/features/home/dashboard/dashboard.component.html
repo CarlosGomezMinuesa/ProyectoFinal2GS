@@ -1,0 +1,29 @@
+<mat-sidenav-container class="sidenav-container" color="primary">
+    <mat-sidenav #drawer style="background-color: #9b7626;" class="sideNavigation" fixedInViewport="true" mode="side" opened="true">
+        <p style="padding:35px ; margin-top: 50px; font-style: oblique;">BARRA LATERAL</p>
+        <p style="padding:40px ;">Menu 1</p>
+        <p style="padding:40px ;">Menu 2</p>
+        <p style="padding:40px ;">Menu 3</p>
+        <p style="padding:40px ;">Menu 4</p>
+        <p style="padding:40px ;">Menu 5</p>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar style="background-color: #cea64f;" class="toolbar">
+            <mat-icon style="margin-right: 5px">notes</mat-icon>
+            <span class="toolbar-spacer">Asios</span>
+            <span class="toolbar-spacer"></span>
+
+            <button class="custom-btn" mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>account_circle</mat-icon> &nbsp;
+      </button>
+            <mat-menu #menu="matMenu">
+                <button class="custom-btn" mat-menu-item>Perfil</button>
+                <button class="custom-btn" mat-menu-item (click)="clearData()">Cerrar Sesión</button>
+            </mat-menu>
+        </mat-toolbar>
+        <div class="content-area">
+            <h1 style="color: #8f6608; display: flex; justify-content: space-around; padding-top: 200px;"> <strong>ASIOS DASHBOARD</strong></h1>
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
